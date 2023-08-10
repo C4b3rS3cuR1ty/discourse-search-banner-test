@@ -10,7 +10,8 @@ $max-width: 600px;
 
 .search-banner {
   background-image: var(--custom-bg);
-border radius : 15px; 
+  border-radius: 15px;
+
   @if $tile-background_image == "true" {
     background-size: auto;
   } @else {
