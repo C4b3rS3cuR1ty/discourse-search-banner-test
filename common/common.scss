@@ -4,46 +4,33 @@ $max-width: 600px;
 
 
 
-.neonText {
-  color: #fff;
-  text-align:center;
-  text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+	font-family: "Russo One", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #365FA0;
+	font-size: 100px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1); }
+	80%  {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1); stroke-width: 3; }
+	100% {
+		fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
 }
 
-h1 {
-  font-size: 4.2rem;
-  animation: flicker 1.5s infinite alternate;     
-}
+.wrapper {background-color: #FFFFFF};
 
-/* Flickering animation */
-@keyframes flicker {
-    
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-
-      text-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 40px #0fa,
-      0 0 80px #0fa,
-      0 0 90px #0fa,
-      0 0 100px #0fa,
-      0 0 150px #0fa;
-  
-  }
-  
-  20%, 24%, 55% {        
-      text-shadow: none;
-  }    
-}
 
 
 
